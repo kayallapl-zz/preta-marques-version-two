@@ -149,6 +149,7 @@ input[type="search"]::-webkit-search-results-decoration {
 :root {
   --text-color: #828284;
   --highlight-color: #fc00a5;
+  --header-size: 56px;
 }
 
 body {
@@ -273,7 +274,7 @@ a {
 	margin: 0 auto 0 auto;
     max-width: 100%;
     width: 100%;
-	height: 54px;
+	height: var(--header-size);
     padding: 0;
     position: relative;
 	box-shadow: 0px 0px 4px var(--text-color);
@@ -2347,18 +2348,18 @@ ul.wp-block-social-links {
 /* -------------------------------------------------------------------------------- */
 
 .section-inner#page-home{
-    background: url("assets/images/image-home.jpg") left / 44vw calc(100vh - 54px) no-repeat;
+    background: url("assets/images/image-home.jpg") left / 44vw calc(100vh - var(--header-size)) no-repeat;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    height: calc(100vh - 54px);
+    height: calc(100vh - var(--header-size));
     max-width: 100vw;
 	width: 100vw;
 	overflow: hidden;
 }
 
 .section-inner#page-home .presentation-box{
-	margin-top: 12vh;
+	margin-top: 13vh;
 	position: relative;
 }
 
