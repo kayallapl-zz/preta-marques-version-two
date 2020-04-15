@@ -2,7 +2,7 @@
 
 	<div class="comments">
 	  
-		<h3 class="comment-reply-title"><?php _e( 'Comments', 'pretatheme' ) ?></h3>
+		<h3 class="comment-reply-title"><?php _e( 'Comments', 'hamilton' ) ?></h3>
 		
 		<?php 
 		
@@ -29,7 +29,7 @@
 
 	<div id="respond">
 		
-		<p class="closed"><?php _e( 'Comments closed', 'pretatheme' ); ?></p>
+		<p class="closed"><?php _e( 'Comments closed', 'hamilton' ); ?></p>
 		
 	</div> <!-- #respond -->
 

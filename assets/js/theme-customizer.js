@@ -25,7 +25,7 @@
 
 
 	// Dark Mode
-	wp.customize( 'pretatheme_dark_mode', function( value ) {
+	wp.customize( 'hamilton_dark_mode', function( value ) {
 		value.bind( function( newval ) {
 			if ( newval == true ) {
 				$( 'body' ).addClass( 'dark-mode' );
@@ -37,7 +37,7 @@
 	
 	
 	// Alt Nav
-	wp.customize( 'pretatheme_alt_nav', function( value ) {
+	wp.customize( 'hamilton_alt_nav', function( value ) {
 		value.bind( function( newval ) {
 			console.log( newval );
 			if ( newval == true ) {
@@ -50,7 +50,7 @@
 	
 	
 	// Three grid columns
-	wp.customize( 'pretatheme_max_columns', function( value ) {
+	wp.customize( 'hamilton_max_columns', function( value ) {
 		value.bind( function( newval ) {
 			if ( newval == true ) {
 				$( 'body' ).addClass( 'three-columns-grid' );
@@ -69,7 +69,7 @@
 	
 	
 	// Show preview titles
-	wp.customize( 'pretatheme_show_titles', function( value ) {
+	wp.customize( 'hamilton_show_titles', function( value ) {
 		value.bind( function( newval ) {
 			if ( newval == true ) {
 				$( 'body' ).addClass( 'show-preview-titles' );

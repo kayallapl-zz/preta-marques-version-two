@@ -24,14 +24,14 @@ if ( have_posts() )  :
 						<div class="meta">
 
 							<?php 
-							echo __( 'In', 'pretatheme' ) . ' '; the_category( ', ' ); 
+							echo __( 'In', 'hamilton' ) . ' '; the_category( ', ' ); 
 
 							if ( comments_open() ) : ?>
 								<span>&bull;</span>
 								<?php comments_popup_link( 
-									__( 'Add Comment', 'pretatheme' ), 
-									__( '1 Comment', 'pretatheme' ), 
-									sprintf( __('%s Comments', 'pretatheme' ), '%' ), 
+									__( 'Add Comment', 'hamilton' ), 
+									__( '1 Comment', 'hamilton' ), 
+									sprintf( __('%s Comments', 'hamilton' ), '%' ), 
 									'' 
 								); ?>
 							<?php endif; ?>
@@ -47,7 +47,7 @@ if ( have_posts() )  :
 			<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 
 				<div class="featured-image">
-					<?php the_post_thumbnail( 'pretatheme_fullscreen-image' ); ?>
+					<?php the_post_thumbnail( 'hamilton_fullscreen-image' ); ?>
 				</div>
 
 			<?php endif; ?>
@@ -61,7 +61,7 @@ if ( have_posts() )  :
 			<?php 
 			
 			wp_link_pages( array(
-				'before' => '<p class="section-inner thin linked-pages">' . __( 'Pages:', 'pretatheme' ),
+				'before' => '<p class="section-inner thin linked-pages">' . __( 'Pages:', 'hamilton' ),
 			) ); 
 			
 			if ( get_post_type() == 'post' ) : ?>

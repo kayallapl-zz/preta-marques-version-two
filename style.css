@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------------------
 
 	Theme Name: Preta Theme
-    Text Domain: pretatheme
+    Text Domain: hamilton
 	Version: 2.0
 	Description: Preta Theme is a wordpress theme based on Hamilton theme by Anders Norén (https://www.andersnoren.se).
 	Tags: blog, two-columns, three-columns, custom-menu, featured-images, threaded-comments, translation-ready, grid-layout, custom-background, custom-logo, editor-style, sticky-post, theme-options, portfolio, photography, block-styles, wide-blocks
@@ -120,11 +120,42 @@ input[type="search"]::-webkit-search-results-decoration {
 /* -------------------------------------------------------------------------------- */
 
 
+/* FONTS */
+
+@font-face {
+    font-family: 'Playfair Regular';
+    src: url("assets/fonts/PlayfairDisplay-Regular.ttf");
+    src: url("assets/fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Bold';
+    src: url("assets/fonts/PlayfairDisplay-Bold.ttf");
+    src: url("assets/fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotu Regular';
+    src: url("assets/fonts/Gotu-Regular.ttf");
+    src: url("assets/fonts/Gotu-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  --text-color: #828284;
+  --highlight-color: #fc00a5;
+}
+
 body {
     background: #fff;
 	border: none;
-    color: #000; 
-	font-family: 'Libre Franklin', -apple-system, 'Helvetica Neue', sans-serif;
+    color: var(--text-color); 
+	font-family: 'Gotu Regular';
     font-size: 20px;
 }
 
@@ -151,7 +182,7 @@ body * {
 }
 
 body a {
-	color: #000;
+	color: var(--text-color);
 	text-decoration: none;
 }
 
@@ -160,7 +191,8 @@ body a {
 }
 
 body a:hover { 
-	text-decoration: underline; 
+	text-decoration: none;
+	text-shadow: .2px .2px 1px currentColor;
 }
 
 img {
@@ -199,7 +231,7 @@ main {
 
 .section-inner {
 	margin: 0 auto;
-	max-width: 1240px;
+	max-width: 1024px;
 	width: 90%;
 }
 
@@ -238,12 +270,15 @@ a {
 
 
 .site-header { 
-    margin: 0 auto 0 auto;
-	max-width: 1240px;
-	padding: 100px 0;
-	position: relative;
-    width: 90%;
-	z-index: 10000;
+	margin: 0 auto 0 auto;
+    max-width: 100%;
+    width: 100%;
+	height: 54px;
+    padding: 0;
+    position: relative;
+	box-shadow: 0px 0px 4px var(--text-color);
+	background-color: #fff;
+    z-index: 10000;
 }
 
 .wp-custom-logo .site-header {
@@ -494,21 +529,25 @@ a {
 
 .show-alt-nav .alt-nav-wrapper,
 .no-js .alt-nav-wrapper {
-	display: block;
+	display: flex;
 }
 
 .alt-nav-wrapper {
-	display: none;
-	margin-left: 80px;
+    display: none;
+    align-items: center;
+	width: 90%;
+    height: 100%;
+    max-width: 1024px;
+    margin: auto;
 }
 
 .alt-nav {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	margin: -10px 0 0 -40px;
-	position: relative;
-	z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    z-index: 1;
 }
 
 .alt-nav li {
@@ -519,7 +558,9 @@ a {
 }
 
 .alt-nav > li {
-	margin: 10px 0 0 40px;
+    display: flex;
+	height: 100%;
+    align-items: center;
 	position: relative;
 }
 
@@ -545,11 +586,18 @@ a {
 }
 
 .alt-nav > li.menu-item-has-children:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .alt-nav li a {
-	display: block;
+	display: flex;
+    align-items: center;
+	height: 100%;
+	text-transform: uppercase;
+}
+
+.alt-nav li.current_page_item a {
+	text-shadow: .2px .2px 1px currentColor;
 }
 
 .alt-nav ul {
@@ -1315,8 +1363,8 @@ figure {
 
 .entry-content .alignwide {
 	margin-left: calc( 50% - 620px );
-	max-width: 1240px;
-	width: 1240px;
+	max-width: 1024px;
+	width: 1024px;
 }
 
 .alignnone {
@@ -2294,9 +2342,71 @@ ul.wp-block-social-links {
 	border-bottom-color: rgba( 255, 255, 255, .35 );
 }
 
+/* -------------------------------------------------------------------------------- */
+/*	11.	Home Page
+/* -------------------------------------------------------------------------------- */
+
+.section-inner#page-home{
+    background: url("assets/images/image-home.jpg") left / 44vw calc(100vh - 54px) no-repeat;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: calc(100vh - 54px);
+    max-width: 100vw;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.section-inner#page-home .presentation-box{
+	margin-top: 12vh;
+	position: relative;
+}
+
+.section-inner#page-home .presentation-box::before{
+	content: "";
+    width: 0.26vw;
+    height: 50vh;
+    background-color: var(--highlight-color);
+    position: absolute;
+    bottom: 8vw;
+    right: 10vw;
+}
+
+.section-inner#page-home .presentation-box::after{
+	content: "";
+    width: 0.26vw;
+    height: 50vh;
+    background-color: var(--highlight-color);
+    position: absolute;
+    top: 22.5vw;
+    right: 10vw;
+}
+
+.section-inner#page-home .presentation-box-title{
+	width: 28vw;
+    font-family: 'Playfair Bold';
+    font-size: 7.2vw;
+    line-height: 0.8;
+    letter-spacing: 0.1vw;
+}
+
+.section-inner#page-home .presentation-box-title span{
+	font-family: 'Playfair Regular';
+	letter-spacing: 0.2vw;
+}
+
+.section-inner#page-home .presentation-box-description{
+	font-size: 2.4vw;
+    text-transform: uppercase;
+    letter-spacing: 1.4vw;
+    width: 28.8vw;
+    margin-top: 3.4vw;
+    margin-left: 17vw;
+    line-height: 1.4;
+}
 
 /* -------------------------------------------------------------------------------- */
-/*	11.	Media Queries
+/*	12.	Media Queries
 /* -------------------------------------------------------------------------------- */
 
 

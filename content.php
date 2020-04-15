@@ -4,7 +4,7 @@ $extra_classes = 'post-preview tracker';
 
 // Determine whether a fallback is needed for sizing
 if ( has_post_thumbnail() && ! post_password_required() ) {
-	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'pretatheme_preview-image' );
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'hamilton_preview-image' );
 	if ( $image ) {
 		$aspect_ratio = $image[2] / $image[1];
 		// Guaranteee a mininum aspect ratio of 3/4
@@ -16,7 +16,7 @@ if ( has_post_thumbnail() && ! post_password_required() ) {
 	$extra_classes .= ' fallback-image';
 }
 
-$image_style_attr = ( has_post_thumbnail() && ! post_password_required() ) ? ' style="background-image: url( ' . get_the_post_thumbnail_url( $post->ID, 'pretatheme_preview-image' ) . ' );"' : '';
+$image_style_attr = ( has_post_thumbnail() && ! post_password_required() ) ? ' style="background-image: url( ' . get_the_post_thumbnail_url( $post->ID, 'hamilton_preview-image' ) . ' );"' : '';
 
 ?>
 
@@ -25,7 +25,7 @@ $image_style_attr = ( has_post_thumbnail() && ! post_password_required() ) ? ' s
 	<div class="preview-image"<?php echo $image_style_attr; ?>>
 		<?php 
 		if ( has_post_thumbnail() && ! post_password_required() ) {
-			the_post_thumbnail( 'pretatheme_preview-image' );
+			the_post_thumbnail( 'hamilton_preview-image' );
 		}
 		?>
 	</div>
@@ -33,7 +33,7 @@ $image_style_attr = ( has_post_thumbnail() && ! post_password_required() ) ? ' s
 	<header class="preview-header">
 	
 		<?php if ( is_sticky() ) : ?>
-			<span class="sticky-post"><?php _e( 'Sticky', 'pretatheme' ); ?></span>
+			<span class="sticky-post"><?php _e( 'Sticky', 'hamilton' ); ?></span>
 		<?php endif; ?>
 	
 		<?php the_title( '<h2 class="title">', '</h2>' ); ?>

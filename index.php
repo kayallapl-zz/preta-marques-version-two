@@ -2,11 +2,11 @@
 
 	<div class="section-inner">
 	
-		<?php if ( is_home() && $paged == 0 && get_theme_mod( 'pretatheme_home_title' ) ) : ?>
+		<?php if ( is_home() && $paged == 0 && get_theme_mod( 'hamilton_home_title' ) ) : ?>
 		
 			<header class="page-header fade-block">
 				<div>
-					<h2 class="title"><?php echo esc_html( get_theme_mod( 'pretatheme_home_title' ) ); ?></h2>
+					<h2 class="title"><?php echo esc_html( get_theme_mod( 'hamilton_home_title' ) ); ?></h2>
 				</div>
 			</header>
 		
@@ -23,8 +23,8 @@
 		
 			<header class="page-header fade-block">
 				<div>
-					<h2 class="title"><?php printf( __( 'Search: %s', 'pretatheme' ), '&ldquo;' . get_search_query() . '&rdquo;' ); ?></h2>
-					<p><?php global $found_posts; printf( __( 'We found %s results matching your search.', 'pretatheme' ), $wp_query->found_posts ); ?></p>
+					<h2 class="title"><?php printf( __( 'Search: %s', 'hamilton' ), '&ldquo;' . get_search_query() . '&rdquo;' ); ?></h2>
+					<p><?php global $found_posts; printf( __( 'We found %s results matching your search.', 'hamilton' ), $wp_query->found_posts ); ?></p>
 				</div>
 			</header>
 		
@@ -34,8 +34,8 @@
 
 				<header class="page-header fade-block">
 					<div>
-						<h2 class="title"><?php _e( 'No results found', 'pretatheme' ); ?></h2>
-						<p><?php global $found_posts; printf( __( 'We could not find any results for the search query "%s".', 'pretatheme' ), get_search_query() ); ?></p>
+						<h2 class="title"><?php _e( 'No results found', 'hamilton' ); ?></h2>
+						<p><?php global $found_posts; printf( __( 'We could not find any results for the search query "%s".', 'hamilton' ), get_search_query() ); ?></p>
 						<?php get_search_form(); ?>
 					</div>
 				</header>
