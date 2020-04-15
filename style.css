@@ -2351,9 +2351,6 @@ ul.wp-block-social-links {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    height: 100%;
-    max-width: 100%;
-	width: 100%;
 	padding-top: var(--header-size);
 }
 
@@ -2425,8 +2422,14 @@ ul.wp-block-social-links {
 
 /* Bio */
 
+.section-inner.page#page-bio {
+	height: 100%;
+    max-width: 100%;
+	width: 100%;
+}
+
 .section-inner.page#page-bio .bio-id {
-	background: url(assets/images/image-bio.png) left / 100% no-repeat;
+	background: url(assets/images/image-bio.png) left / contain no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2470,10 +2473,82 @@ ul.wp-block-social-links {
 }
 
 .section-inner.page#page-bio .bio-content p{
-    font-size: 14px;
+	font-size: 14px;
     line-height: 1.4;
     margin-top: 16px;
 }
+
+/* Contato */
+
+.section-inner.page#page-contato{
+	height: 100vh;
+    max-width: 100vw;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.section-inner.page#page-contato .contact-column{
+	display: flex;
+	width: 50%;
+	height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-inner.page#page-contato .contact-column:last-child{
+	justify-content: flex-start;
+}
+
+.section-inner.page#page-contato .message-box{
+	border: 1px solid var(--highlight-color);
+    padding: 24px;
+    max-width: 280px;
+}
+
+.section-inner.page#page-contato .message-box p{
+    font-family: 'Playfair Regular';
+	font-size: 40px;
+    padding-bottom: 10px;
+}
+
+.section-inner.page#page-contato .contact-box {
+	position: relative;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 32px;
+}
+
+.section-inner.page#page-contato .contact-box::after{
+	content: "";
+    width: 3px;
+    height: 50vh;
+    background-color: var(--highlight-color);
+    position: absolute;
+    top: calc(100% + 16px);
+}
+
+.section-inner.page#page-contato .contact-option {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section-inner.page#page-contato .contact-option img{
+    width: 24px;
+}
+
+.section-inner.page#page-contato .contact-option a{
+	font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 8px;
+}
+
 
 /* -------------------------------------------------------------------------------- */
 /*	12.	Media Queries

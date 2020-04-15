@@ -518,78 +518,78 @@ if ( ! function_exists( 'hamilton_block_editor_styles' ) ) :
 
 endif;
 
-if ( ! function_exists( 'create_jobs_audiovisual' ) ) :
+if ( ! function_exists( 'create_audiovisual' ) ) :
 
-	function create_jobs_audiovisual()
+	function create_audiovisual()
 	{
 
 		register_post_type(
-			'jobs_audiovisual',
+			'audiovisual',
 			// CPT Options
 			array(
 				'labels' => array(
-					'name' => __('Jobs Audiovisual'),
-					'singular_name' => __('Job Audiovisual'),
-					'plural_name' => __('Jobs Audiovisual'),
+					'name' => __('Audiovisual'),
+					'singular_name' => __('Audiovisual'),
+					'plural_name' => __('Audiovisual'),
 				),
 				'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
 				'public' => true,
 				'has_archive' => true,
-				'rewrite' => array('slug' => 'jobs_audiovisual'),
+				'rewrite' => array('slug' => 'audiovisual'),
 			)
 		);
 	}
-	add_action( 'init', 'create_jobs_audiovisual', 1 );
+	add_action( 'init', 'create_audiovisual', 1 );
 
 endif;
 
-if ( ! function_exists( 'create_jobs_teatro' ) ) :
+if ( ! function_exists( 'create_teatro' ) ) :
 
-	function create_jobs_teatro()
+	function create_teatro()
 	{
 
 		register_post_type(
-			'jobs_teatro',
+			'teatro',
 			// CPT Options
 			array(
 				'labels' => array(
-					'name' => __('Jobs Teatro'),
-					'singular_name' => __('Job Teatro'),
-					'plural_name' => __('Jobs Teatro'),
+					'name' => __('Teatro'),
+					'singular_name' => __('Teatro'),
+					'plural_name' => __('Teatro'),
 				),
 				'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
 				'public' => true,
 				'has_archive' => true,
-				'rewrite' => array('slug' => 'jobs_teatro'),
+				'rewrite' => array('slug' => 'teatro'),
 			)
 		);
 	}
-	add_action( 'init', 'create_jobs_teatro', 1 );
+	add_action( 'init', 'create_teatro', 1 );
 
 endif;
 
-if ( ! function_exists( 'create_jobs_stylist' ) ) :
+if ( ! function_exists( 'create_stylist' ) ) :
 
-	function create_jobs_stylist()
+	function create_stylist()
 	{
 
 		register_post_type(
-			'jobs_stylist',
+			'stylist',
 			// CPT Options
 			array(
 				'labels' => array(
-					'name' => __('Jobs Stylist'),
-					'singular_name' => __('Job Stylist'),
-					'plural_name' => __('Jobs Stylist'),
+					'name' => __('Stylist'),
+					'singular_name' => __('Stylist'),
+					'plural_name' => __('Stylist'),
 				),
 				'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
 				'public' => true,
 				'has_archive' => true,
-				'rewrite' => array('slug' => 'jobs_stylist'),
+				'rewrite' => array('slug' => 'stylist'),
 			)
 		);
 	}
-	add_action( 'init', 'create_jobs_stylist', 1 );
+	add_action( 'init', 'create_stylist', 1 );
 
 endif;
 
