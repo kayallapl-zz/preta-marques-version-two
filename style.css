@@ -276,7 +276,7 @@ a {
     width: 100%;
 	height: var(--header-size);
     padding: 0;
-    position: relative;
+    position: fixed;
 	box-shadow: 0px 0px 4px var(--text-color);
 	background-color: #fff;
     z-index: 10000;
@@ -2344,28 +2344,54 @@ ul.wp-block-social-links {
 }
 
 /* -------------------------------------------------------------------------------- */
-/*	11.	Home Page
+/*	11.	Pages
 /* -------------------------------------------------------------------------------- */
 
-.section-inner#page-home{
-    background: url("assets/images/image-home.jpg") left / 44vw calc(100vh - var(--header-size)) no-repeat;
+.section-inner.page{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    height: calc(100vh - var(--header-size));
+    height: 100%;
+    max-width: 100%;
+	width: 100%;
+	padding-top: var(--header-size);
+}
+
+.section-inner.page .site-name{
+    font-family: 'Playfair Bold';
+    font-size: 7.2vw;
+    line-height: 0.8;
+    letter-spacing: 0.1vw;
+}
+
+.section-inner.page .site-name span{
+	font-family: 'Playfair Regular';
+	letter-spacing: 0.2vw;
+}
+
+.section-inner.page .title{
+	font-family: 'Playfair Bold';
+	font-size: 22px;
+}
+
+/* Home */
+
+.section-inner.page#page-home{
+    background: url("assets/images/image-home.jpg") left / 44vw 100vh no-repeat;
+    height: 100vh;
     max-width: 100vw;
 	width: 100vw;
 	overflow: hidden;
 }
 
-.section-inner#page-home .presentation-box{
-	margin-top: 13vh;
+.section-inner.page#page-home .presentation-box{
+	margin-top: 16vh;
 	position: relative;
 }
 
-.section-inner#page-home .presentation-box::before{
+.section-inner.page#page-home .presentation-box::before{
 	content: "";
-    width: 0.26vw;
+    width: 3px;
     height: 50vh;
     background-color: var(--highlight-color);
     position: absolute;
@@ -2373,9 +2399,9 @@ ul.wp-block-social-links {
     right: 10vw;
 }
 
-.section-inner#page-home .presentation-box::after{
+.section-inner.page#page-home .presentation-box::after{
 	content: "";
-    width: 0.26vw;
+    width: 3px;
     height: 50vh;
     background-color: var(--highlight-color);
     position: absolute;
@@ -2383,20 +2409,11 @@ ul.wp-block-social-links {
     right: 10vw;
 }
 
-.section-inner#page-home .presentation-box-title{
+.section-inner.page#page-home .site-name{
 	width: 28vw;
-    font-family: 'Playfair Bold';
-    font-size: 7.2vw;
-    line-height: 0.8;
-    letter-spacing: 0.1vw;
 }
 
-.section-inner#page-home .presentation-box-title span{
-	font-family: 'Playfair Regular';
-	letter-spacing: 0.2vw;
-}
-
-.section-inner#page-home .presentation-box-description{
+.section-inner.page#page-home .site-description{
 	font-size: 2.4vw;
     text-transform: uppercase;
     letter-spacing: 1.4vw;
@@ -2404,6 +2421,58 @@ ul.wp-block-social-links {
     margin-top: 3.4vw;
     margin-left: 17vw;
     line-height: 1.4;
+}
+
+/* Bio */
+
+.section-inner.page#page-bio .bio-id {
+	background: url(assets/images/image-bio.png) left / 100% no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	height: 100vh;
+	width: 30vw;
+    position: fixed;
+    left: 0;
+}
+
+.section-inner.page#page-bio .bio-id img {
+	width: 200px;
+    height: 200px;
+    object-fit: cover;
+	border-radius: 50%;
+	margin: 28px;
+}
+
+.section-inner.page#page-bio .site-name {
+    font-size: 44px;
+    width: 200px;
+}
+
+.section-inner.page#page-bio .bio-content {
+	position: relative;
+    width: 100%;
+    margin-left: 30vw;
+    padding: 9vw;
+    padding-top: 26vh;
+    padding-bottom: 0;
+    margin-bottom: 9vw;
+}
+
+.section-inner.page#page-bio .bio-content::before{
+	content: "";
+	background-color: var(--highlight-color);
+    width: 3px;
+	height: 100%;
+	position: absolute;
+	left: 4.5vw;
+	bottom: 0;
+}
+
+.section-inner.page#page-bio .bio-content p{
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 16px;
 }
 
 /* -------------------------------------------------------------------------------- */
