@@ -9,9 +9,9 @@
 		
 		</div>
 		
-		<div class="section-inner page" id="page-general">
+		<div class="section-inner page" id="page-posts">
 			
-			<p class="page-subtitle"><?php the_archive_title(); ?></p>
+			<h2 class="page-subtitle"><?php the_archive_title(); ?></h2>
 			
 	<?php elseif ( is_search() && have_posts() ) : ?>
 		
