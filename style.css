@@ -158,6 +158,7 @@ body {
     color: var(--text-color); 
 	font-family: 'Gotu Regular';
     font-size: 20px;
+	overflow-x: hidden;
 }
 
 body.customizer-preview {
@@ -772,7 +773,7 @@ a {
 }
 
 .preview-image:after {
-	background: rgba( 0, 0, 0, 0.5 );
+	background: #f75fa5b3;
 	content: "";
 	opacity: 0;
 	position: absolute;
@@ -811,6 +812,33 @@ a {
 	transform: translateY( 10px );
 }
 
+.post-preview header.preview-header {
+	display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.post-preview header.preview-header h2{
+	text-align: left;
+	font-size: 32px;
+	line-height: 1;
+}
+
+.post-preview header.preview-header h2.preview-post-type{
+	text-transform: capitalize;
+}
+
+.post-preview header.preview-header h2.preview-title{
+	padding-right: 24px;
+}
+
+.post-preview header.preview-header img{
+	height: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+}
+
 .post-preview.sticky .sticky-post {
 	color: #fff;
 	font-size: 13px;
@@ -835,7 +863,7 @@ a {
 }
 
 .show-preview-titles .post-preview:hover .preview-image:after {
-	background: rgba( 0, 0, 0, 0.6 );
+	background: #f75fa526;
 }
 
 .post-preview:hover header,
@@ -851,10 +879,13 @@ a {
 
 	.three-columns-grid .post-preview {
 		width: 33.3%;
+		height: 256px;
+		max-height: 256px;
+		overflow: hidden;
 	}
 	
 	.three-columns-grid .post-preview header {
-		bottom: 30px;
+		bottom: 20px;
 		left: 30px;
 		right: 30px;
 		top: 30px;
@@ -2354,6 +2385,13 @@ ul.wp-block-social-links {
 	padding-top: var(--header-size);
 }
 
+.section-inner.page#page-general{
+    display: block;
+    align-items: unset;
+    justify-content: unset;
+	padding-top: 0;
+}
+
 .section-inner.page .site-name{
     font-family: 'Playfair Bold';
     font-size: 7.2vw;
@@ -2369,6 +2407,31 @@ ul.wp-block-social-links {
 .section-inner.page .title{
 	font-family: 'Playfair Bold';
 	font-size: 22px;
+}
+
+.section-inner.page .page-title{
+    font-family: 'Playfair Bold';
+    font-size: 30px;
+	letter-spacing: 16px;
+    text-transform: lowercase;
+	margin: 56px 0 48px;
+	position: relative;
+}
+
+.section-inner.page .page-title::after{
+	content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--highlight-color);
+    position: absolute;
+    top: 50%;
+    margin-left: 20px;
+}
+
+.section-inner.page .page-subtitle{
+	text-align: center;
+    margin-bottom: 32px;
+    font-size: 40px;
 }
 
 /* Home */
@@ -2537,7 +2600,6 @@ ul.wp-block-social-links {
     align-items: center;
 }
 
-
 .section-inner.page#page-contato .contact-option img{
     width: 24px;
 }
@@ -2547,6 +2609,35 @@ ul.wp-block-social-links {
     text-transform: uppercase;
     letter-spacing: 4px;
     margin: 8px;
+}
+
+/* Portfolio */
+
+.section-inner.page#page-portfolio {
+	width: 1088px;
+	max-width: 1088px;
+}
+
+.section-inner.page#page-portfolio .job-types li{
+	margin-bottom: 24px;
+}
+
+.section-inner.page#page-portfolio .job-types li a{
+	font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.section-inner.page#page-portfolio, .section-inner.page#page-latest{
+	display: block;
+}
+
+.section-inner.page#page-latest{
+	padding-top: 16px;
+}
+
+.section-inner.page#page-latest p.latest{
+	margin-bottom: 16px;
 }
 
 

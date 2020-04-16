@@ -543,31 +543,6 @@ if ( ! function_exists( 'create_audiovisual' ) ) :
 
 endif;
 
-if ( ! function_exists( 'create_teatro' ) ) :
-
-	function create_teatro()
-	{
-
-		register_post_type(
-			'teatro',
-			// CPT Options
-			array(
-				'labels' => array(
-					'name' => __('Teatro'),
-					'singular_name' => __('Teatro'),
-					'plural_name' => __('Teatro'),
-				),
-				'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
-				'public' => true,
-				'has_archive' => true,
-				'rewrite' => array('slug' => 'teatro'),
-			)
-		);
-	}
-	add_action( 'init', 'create_teatro', 1 );
-
-endif;
-
 if ( ! function_exists( 'create_stylist' ) ) :
 
 	function create_stylist()
@@ -590,6 +565,31 @@ if ( ! function_exists( 'create_stylist' ) ) :
 		);
 	}
 	add_action( 'init', 'create_stylist', 1 );
+
+endif;
+
+if ( ! function_exists( 'create_teatro' ) ) :
+
+	function create_teatro()
+	{
+
+		register_post_type(
+			'teatro',
+			// CPT Options
+			array(
+				'labels' => array(
+					'name' => __('Teatro'),
+					'singular_name' => __('Teatro'),
+					'plural_name' => __('Teatro'),
+				),
+				'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+				'public' => true,
+				'has_archive' => true,
+				'rewrite' => array('slug' => 'teatro'),
+			)
+		);
+	}
+	add_action( 'init', 'create_teatro', 1 );
 
 endif;
 
