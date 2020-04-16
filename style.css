@@ -2183,7 +2183,8 @@ ul.wp-block-social-links {
 
 
 .post-pagination {
-	margin-top: 100px;
+	margin-top: 0;
+    margin-bottom: 40px;
 }
 
 .post-pagination .previous-posts-link { float: left; }
@@ -2733,9 +2734,9 @@ ul.wp-block-social-links {
 	object-position: 50% 10%;
 }
 
-ul.wegallery-gallery li.wegal-thumb .wegal-caption {
+.gallery-bigbox ul.wegallery-gallery li.wegal-thumb .wegal-caption {
     font-size: 14px;
-    padding: 16px 0;
+    padding-top: 8px;
     line-height: 1.4;
     text-align: left;
 }
@@ -2749,6 +2750,17 @@ ul.wegallery-gallery li.wegal-thumb .wegal-caption {
 
 .gallery-bigbox {
     margin: 24px 24px 80px;
+}
+
+/* Pagination */
+
+.next-posts-link .title, .previous-posts-link .title{
+	font-size: 24px;
+	color: var(--highlight-color);
+}
+
+.next-posts-link .title a, .previous-posts-link .title a{
+	color: var(--highlight-color);
 }
 
 /* -------------------------------------------------------------------------------- */

@@ -27,6 +27,10 @@
                     <p class="text">Assistente de Figurino: <span class="highlighted"><?php the_field('assistente_de_figurino'); ?></span></p>
                 <?php endif; ?>
 
+                <div class="gallery-box">
+                    <?php echo do_shortcode(get_field('galeria')); ?>
+                </div>
+
             </div>
 
         </div>
