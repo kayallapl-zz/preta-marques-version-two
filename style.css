@@ -343,7 +343,7 @@ a {
 	margin-top: 0;
 	opacity: 1;
     position: absolute;
-        right: 0;
+        right: 16px;
         top: calc( 50% - 1px );
 	transform: rotate( 0deg );
     transition: transform .2s ease-in 0s, margin 0.2s ease-in 0.2s, opacity 0s ease-in 0.25s;
@@ -390,12 +390,11 @@ a {
 .site-nav {
 	background: #fff;
 	opacity: 0;
-	padding: 222px 0 120px;
 	position: fixed;
 		bottom: 0;
 		left: -99999px;
 		right: 99999px;
-		top: 0;
+		top: 80px;
 	transform: translateY( 1rem );
 	transition: opacity .3s ease-in-out, transform .3s ease-in-out, left 0s .3s, right 0s .3s;
 	z-index: 9999;
@@ -409,6 +408,7 @@ a {
 	left: 0;
 	right: 0;
 	opacity: 1;
+	top: var(--header-size);
 	transform: translateY( 0 );
 	transition: opacity .3s ease-in-out, transform .3s ease-in-out;
 }
@@ -466,22 +466,22 @@ a {
 
 .site-nav ul:first-child a:hover,
 .site-nav ul:first-child .current-menu-item > a { 
-	border-bottom-color: #000; 
+	text-shadow: .2px .2px 1px currentColor;
 }
 
 .dark-mode .site-nav ul:first-child a:hover,
 .dark-mode .site-nav ul:first-child .current-menu-item > a { 
-	border-bottom-color: #fff; 
+	text-shadow: .2px .2px 1px currentColor;
 }
 
 .site-nav ul:last-child a:hover,
 .site-nav ul:last-child .current-menu-item > a { 
-	border-bottom-color: rgba( 0, 0, 0, .35 );
+	text-shadow: .2px .2px 1px currentColor;
 }
 
 .dark-mode .site-nav ul:last-child a:hover,
 .dark-mode .site-nav ul:last-child .current-menu-item > a { 
-	border-bottom-color: rgba( 255, 255, 255, .35 );
+	text-shadow: .2px .2px 1px currentColor;
 }
 
 .site-nav footer {
@@ -2670,6 +2670,11 @@ ul.wp-block-social-links {
 	margin-bottom: 80px;
 }
 
+
+.section-inner.page .single-container iframe {
+	width: 100%;
+}
+
 .section-inner.page .single-container .single-content {
 	width: 60%;
 }
@@ -2856,7 +2861,82 @@ ul.wp-block-social-links {
 		padding: 50px 600px 0 0;
 	}
 
+	.section-inner.page#page-portfolio {
+		width: 1024px;
+		max-width: 90%;
+	}
 
+	.post-preview {
+		width: 33%;
+	}
+
+	.post-preview header.preview-header h2 {
+		font-size: 24px;
+	}
+
+	.post-preview header.preview-header img {
+		height: 16px;
+	}
+
+	.preview-image {
+		height: 160px;
+	}
+
+	.post-preview header {
+		top: 24px;
+		bottom: 24px;
+		left: 24px;
+		right: 24px;
+	}
+
+	.section-inner.page .single-container {
+		flex-direction: column;
+	}
+
+	.section-inner.page .single-container .single-content, .section-inner.page .single-container .single-info {
+		width: 100%;
+		padding: 0 0 16px 0;
+	}
+
+	.gallery-box {
+		padding: 0;
+	}
+
+	ul.wegallery-gallery {
+		padding: 0;
+	}
+
+	.section-inner.page .single-container .single-content p.text {
+		font-size: 18px;
+	}
+
+	.gallery-bigbox {
+		margin: 0;
+	}
+
+	.gallery-box ul.wegallery-gallery li.wegal-thumb img {
+		height: 200px;
+	}
+
+	.section-inner.page#page-contato {
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+	}
+
+	.section-inner.page#page-contato .contact-column {
+		width: 100%;
+	}
+
+	.section-inner.page#page-contato .message-box {
+		margin-top: 24px;
+	}
+
+	.section-inner.page#page-contato .message-box p {
+		font-size: 30px;
+		padding-bottom: 6px;
+	}
 }
 
 
@@ -2989,10 +3069,6 @@ ul.wp-block-social-links {
 	
 	
 	/* Site Header ----------------------------- */
-	
-	.site-header {
-		padding: 50px 0;
-	}
 
 	.wp-custom-logo .site-header {
 		padding: 35px 0;
@@ -3000,11 +3076,6 @@ ul.wp-block-social-links {
 	
 	
 	/* Navigation ----------------------------- */
-	
-	.site-nav {
-		padding-top: 124px;
-		padding-bottom: 40px;
-	}
 	
 	.site-nav ul:first-child li {
 		font-size: 30px;
@@ -3229,7 +3300,110 @@ ul.wp-block-social-links {
 	.site-footer p + p {
 		font-size: 16px;
 	}
+
+	.section-inner.page .site-name {
+		font-size: 70px;
+		line-height: 0.8;
+		letter-spacing: 2px;
+	}
+
+	.section-inner.page#page-home .site-description {
+		font-size: 26px;
+		letter-spacing: 12px;
+		width: 290px;
+		margin-top: 40px;
+		margin-left: 20vw;
+		line-height: 1.4;
+	}
+
+	.section-inner.page {
+		align-items: center;
+	}
+
+	.section-inner.page#page-home .presentation-box {
+		margin-top: 0;
+	}
+
+	.section-inner.page#page-home .presentation-box::before {
+		bottom: calc(100% - 140px);
+		right: 15vw;
+	}
+
+	.section-inner.page#page-home .presentation-box::after {
+		top: 100%;
+		right: 15vw;
+	}
+
+	.section-inner.page .site-name span {
+		letter-spacing: 4px;
+	}
+
+	.section-inner.page#page-home {
+		background: url(assets/images/image-home.jpg) right 54vw bottom 0 / cover no-repeat;
+	}
+
+	.section-inner.page#page-bio {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.section-inner.page#page-bio .bio-id {
+		position: relative;
+		height: auto;
+		width: auto;
+		background: none;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.section-inner.page#page-bio .bio-content {
+		margin: 0;
+		padding: 20px 60px;
+	}
+
+	.section-inner.page#page-bio .bio-content::before {
+		height: 150%;
+		position: absolute;
+		left: 30px;
+		bottom: 24px;
+	}
+
+	.section-inner.page#page-bio .bio-id img {
+		margin-left: 60px;
+		height: 120px;
+		width: 120px;
+	}
+
+	.section-inner.page#page-contato .contact-option a {
+    	font-size: 20px;
+	}
+
+	.section-inner.page .page-title {
+		font-size: 24px;
+		letter-spacing: 14px;
+		margin: 40px 0;
+	}
+
+	.section-inner.page#page-portfolio .job-types li {
+		margin-bottom: 16px;
+	}
+
+	.section-inner.page#page-portfolio .job-types li a {
+		font-size: 26px;
+		letter-spacing: 6px;
+	}
 	
+	.section-inner.page h2.page-subtitle {
+		font-size: 32px;
+		margin-bottom: 32px;
+	}
+
+	.section-inner.page .page-title .page-subtitle {
+		position: absolute;
+		right: 0;
+		top: 140%;
+		font-size: 22px;
+	}
 
 }
 
@@ -3291,5 +3465,37 @@ ul.wp-block-social-links {
 	.comments-pagination .page-numbers:last-child {
 		float: right;
 	}
+
+	.section-inner.page#page-home .site-name {
+		width: 260px;
+	}
 	
+	.section-inner.page .site-name {
+		font-size: 54px;
+	}
+
+	.section-inner.page#page-home .site-description {
+		font-size: 22px;
+		margin-top: 24px;
+		width: 260px;
+		line-height: 1.3;
+	}
+
+	.section-inner.page#page-home .presentation-box::before {
+    	bottom: calc(100% - 90px);
+	}
+
+	.section-inner.page#page-home .presentation-box::after {
+		top: calc(100% + 16px);
+		right: 15vw;
+	}
+	
+	.section-inner.page#page-bio .bio-id img {
+		margin-right: 18px;
+	}
+
+	.section-inner.page#page-bio .site-name {
+		font-size: 28px;
+		width: 140px;
+	}
 }
