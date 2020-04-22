@@ -4,13 +4,13 @@
 	
 		<?php if ( get_previous_posts_link() ) : ?>
 			<div class="previous-posts-link">
-				<h4 class="title">< <?php previous_posts_link( __( 'mais recente', 'hamilton' ) ); ?></h4>
+				<?php previous_posts_link( __( '<div class="arrow-button arrow-left"></div>' ) ); ?>
 			</div>
 		<?php endif; ?>
 		
 		<?php if ( get_next_posts_link() ) : ?>
 			<div class="next-posts-link">
-				<h4 class="title"><?php next_posts_link( __( 'mais antigo', 'hamilton' ) ); ?> ></h4>
+				<?php next_posts_link( __( '<div class="arrow-button arrow-right"></div>' ) ); ?>
 			</div>
 		<?php endif; ?>
 

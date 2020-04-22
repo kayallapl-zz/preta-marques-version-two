@@ -2757,6 +2757,19 @@ ul.wp-block-social-links {
     margin: 24px 24px 80px;
 }
 
+.arrow-button {
+	height: 44px;
+    width: 40px;
+}
+
+.arrow-left{
+	background: url(assets/icons/arrow-left.png) 50% / 24px no-repeat, #f75fa5 !important;
+}
+
+.arrow-right{
+	background: url(assets/icons/arrow-right.png) 50% / 24px no-repeat, #f75fa5 !important;
+}
+
 /* Pagination */
 
 .next-posts-link .title, .previous-posts-link .title{
@@ -2971,7 +2984,6 @@ ul.wp-block-social-links {
 
 @media ( max-width: 750px ) {
 
-
 	/* Navigation ----------------------------- */
 	
 	.site-nav .menus > ul {
@@ -3045,6 +3057,9 @@ ul.wp-block-social-links {
 		width: 55px;
 	}
 
+	.post-preview {
+		width: 50%;
+	}
 
 }
 
@@ -3143,10 +3158,7 @@ ul.wp-block-social-links {
 	/* Archive ----------------------------- */
 	
 	.posts {
-		margin: -10px 0;
 		position: relative;
-			left: calc( 50% - 50vw + 2.5px );
-		width: calc( 100vw - 5px );
 	}
 	
 	.post-preview {
@@ -3403,6 +3415,10 @@ ul.wp-block-social-links {
 		right: 0;
 		top: 140%;
 		font-size: 22px;
+	}
+
+	.post-preview {
+		width: 100%;
 	}
 
 }

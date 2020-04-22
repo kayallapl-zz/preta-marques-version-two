@@ -39,7 +39,7 @@ $image_style_attr = ( has_post_thumbnail() && ! post_password_required() ) ? ' s
 			<h2 class="preview-post-type">Styling</h2>
 		<?php endif; ?>
 		<?php the_title( '<h2 class="preview-title">', '</h2>' ); ?>
-		<img src="<?= get_template_directory_uri() ?>/assets/icons/icon-seta.png" alt="right arrow">
+		<img src="<?= get_template_directory_uri() ?>/assets/icons/arrow-right.png" alt="right arrow">
 	
 	</header>
 
