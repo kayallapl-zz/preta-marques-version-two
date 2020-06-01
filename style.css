@@ -2581,20 +2581,18 @@ ul.wp-block-social-links {
     flex-direction: column;
 }
 
+.section-inner.page#page-contato .contact-column.contact-column-image {
+    align-items: flex-end;
+}
+
 .section-inner.page#page-contato .contact-column:last-child{
 	justify-content: flex-start;
 }
 
-.section-inner.page#page-contato .message-box{
+.section-inner.page#page-contato .image-box{
 	border: 1px solid var(--highlight-color);
     padding: 24px;
-    max-width: 280px;
-}
-
-.section-inner.page#page-contato .message-box p{
-    font-family: 'Playfair Regular';
-	font-size: 40px;
-    padding-bottom: 10px;
+    max-width: 500px;
 }
 
 .section-inner.page#page-contato .contact-box {
@@ -2671,9 +2669,18 @@ ul.wp-block-social-links {
 	margin-bottom: 80px;
 }
 
+.section-inner.page .single-container#audiovisual{
+	margin-bottom: 32px;
+}
 
 .section-inner.page .single-container iframe {
-	width: 100%;
+	width: 520px;
+    height: 290px;
+}
+
+.section-inner.page .single-container video {
+	width: 520px;
+    height: 290px;
 }
 
 .section-inner.page .single-container .single-content {
@@ -2686,7 +2693,7 @@ ul.wp-block-social-links {
 
 .section-inner.page .single-container .single-content p.text{
 	font-size: 15px;
-    margin-bottom: 24px;
+	margin-bottom: 24px;
 }
 
 .section-inner.page .single-container .single-info{
@@ -2701,6 +2708,11 @@ ul.wp-block-social-links {
 .section-inner.page .single-container .single-info p.text{
 	font-size: 22px;
     margin-bottom: 8px;
+}
+
+.section-inner.page .single-container .single-info p.text.small{
+    font-size: 16px;
+    margin-top: 12px;
 }
 
 .section-inner.page .single-container .single-info p.text span.highlighted{
@@ -2741,8 +2753,14 @@ ul.wp-block-social-links {
 /* Gallery */
 
 .gallery-box {
-	margin-top: 40px;
-	padding: 24px;
+}
+
+.gallery-box .wegal-gallery-wrap {
+    margin: 0;
+}
+
+.gallery-box ul.wegallery-gallery {
+	padding: 0;
 }
 
 .gallery-box ul.wegallery-gallery.wegal-col-3 li:nth-child(3n+1) {
@@ -2964,13 +2982,12 @@ ul.wp-block-social-links {
 		width: 100%;
 	}
 
-	.section-inner.page#page-contato .message-box {
-		margin-top: 24px;
+	.section-inner.page#page-contato .contact-column.contact-column-image {
+		align-items: center;
 	}
 
-	.section-inner.page#page-contato .message-box p {
-		font-size: 30px;
-		padding-bottom: 6px;
+	.section-inner.page#page-contato .image-box {
+		margin-top: 24px;
 	}
 }
 

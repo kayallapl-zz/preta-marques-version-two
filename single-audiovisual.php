@@ -9,6 +9,33 @@
             <div class="single-content">
                 <?php the_title( '<p class="page-subtitle">', '</p>' );?>
                 <p class="text"><?php the_field('conteudo'); ?></p>
+            </div>
+            
+            <div class="single-info">
+
+                <?php if ( get_field('direcao') ) : ?>
+                    <p class="text">Direção: <?php the_field('direcao'); ?></p>
+                <?php endif; ?>
+
+                <?php if ( get_field('figurinista') ) : ?>
+                    <p class="text">Figurinista: <span <?php if (get_field('assistente_de_figurino') == "") echo "class=\"highlighted\""; ?>><?php echo get_field('figurinista'); ?></span></p>
+                <?php endif; ?>
+
+                <?php if ( get_field('assistente_de_figurino') ) : ?>
+                    <p class="text">Assistente de Figurino: <span class="highlighted"><?php the_field('assistente_de_figurino'); ?></span></p>
+                <?php endif; ?>
+
+                <?php if ( get_field('fotos') ) : ?>
+                    <p class="text small">Fotos: <?php the_field('fotos'); ?></p>
+                <?php endif; ?>
+
+            </div>
+
+        </div>
+
+        <div class="single-container">
+
+            <div class="single-content">
                 <?php the_field('midia'); ?>
                 <?php the_field('midia_alternativa'); ?>
                 <?php if ( get_field('internal_video') ) : ?>
@@ -44,18 +71,6 @@
             </div>
             
             <div class="single-info">
-
-                <?php if ( get_field('direcao') ) : ?>
-                    <p class="text">Direção: <?php the_field('direcao'); ?></p>
-                <?php endif; ?>
-
-                <?php if ( get_field('figurinista') ) : ?>
-                    <p class="text">Figurinista: <span <?php if (get_field('assistente_de_figurino') == "") echo "class=\"highlighted\""; ?>><?php echo get_field('figurinista'); ?></span></p>
-                <?php endif; ?>
-
-                <?php if ( get_field('assistente_de_figurino') ) : ?>
-                    <p class="text">Assistente de Figurino: <span class="highlighted"><?php the_field('assistente_de_figurino'); ?></span></p>
-                <?php endif; ?>
 
                 <div class="gallery-box">
                     <?php echo do_shortcode(get_field('galeria')); ?>

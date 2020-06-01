@@ -1,11 +1,9 @@
 <?php get_header(); ?>
 
 	<div class="section-inner page" id="page-contato">
-		<div class="contact-column">
-			<div class="message-box">
-				<p>Entre</p>
-				<p>em contato</p>
-				<p>comigo.</p>
+		<div class="contact-column contact-column-image">
+			<div class="image-box">
+				<img src="<?= get_template_directory_uri() ?>/assets/images/image-contact.JPG" alt="">
 			</div>
 		</div>
 		<div class="contact-column">
