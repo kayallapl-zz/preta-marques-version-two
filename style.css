@@ -2708,6 +2708,27 @@ ul.wp-block-social-links {
 	text-shadow: .2px .2px 1px currentColor;
 }
 
+.section-inner.page .single-container .alternative_link{
+    padding: 4px 0;
+    display: flex;
+}
+
+.section-inner.page .single-container .alternative_link a{
+    font-size: 16px;
+    color: var(--highlight-color);
+    text-shadow: none;
+    line-height: 1.2;
+}
+
+.section-inner.page .single-container .alternative_link a:hover{
+    text-decoration: underline;
+}
+
+.section-inner.page .single-container .alternative_link img{
+    height: 16px;
+    padding-right: 8px;
+}
+
 .section-inner.page .single-container#stylist, .section-inner.page .single-container#teatro{
 	flex-direction: column;
 }

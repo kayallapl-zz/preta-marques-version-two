@@ -11,6 +11,36 @@
                 <p class="text"><?php the_field('conteudo'); ?></p>
                 <?php the_field('midia'); ?>
                 <?php the_field('midia_alternativa'); ?>
+                <?php if ( get_field('internal_video') ) : ?>
+                    <video width="100%" controls>
+                      <source src="<?php the_field('internal_video'); ?>" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                <?php endif; ?>
+                <?php if ( get_field('link1') ) : ?>
+                    <p class="alternative_link">
+                        <img src="<?= get_template_directory_uri() ?>/assets/icons/follow_link.svg" alt="">
+                        <a target="_blank" href="<?php the_field('link1'); ?>">
+                            <?php the_field('link1_title'); ?>
+                        </a>
+                    </p>
+                <?php endif; ?>
+                <?php if ( get_field('link2') ) : ?>
+                    <p class="alternative_link">
+                        <img src="<?= get_template_directory_uri() ?>/assets/icons/follow_link.svg" alt="">
+                        <a target="_blank" href="<?php the_field('link2'); ?>">
+                            <?php the_field('link2_title'); ?>
+                        </a>
+                    </p>
+                <?php endif; ?>
+                <?php if ( get_field('link3') ) : ?>
+                    <p class="alternative_link">
+                        <img src="<?= get_template_directory_uri() ?>/assets/icons/follow_link.svg" alt="">
+                        <a target="_blank" href="<?php the_field('link3'); ?>">
+                            <?php the_field('link3_title'); ?>
+                        </a>
+                    </p>
+                <?php endif; ?>
             </div>
             
             <div class="single-info">
